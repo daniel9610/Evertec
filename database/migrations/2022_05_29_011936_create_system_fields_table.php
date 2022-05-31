@@ -16,7 +16,8 @@ class CreateSystemFieldsTable extends Migration
         Schema::create('system_fields', function (Blueprint $table) {
             $table->id();
             $table->string('label');
-            $table->integer('type', 2);
+            $table->integer('type');
+            $table->boolean('active');
             $table->timestamps();
         });
     }

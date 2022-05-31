@@ -2,18 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Order;
+use App\Models\Picture;
 use Illuminate\Http\Request;
-use App\Repositories\OrderRepository;
 
-class OrderController extends Controller
+class PictureController extends Controller
 {
-    protected $orders;
-
-    public function __construct(OrderRepository $orders)
-    {
-        $this->orders = $orders;
-    }
     /**
      * Display a listing of the resource.
      *
@@ -48,10 +41,10 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Order  $order
+     * @param  \App\Models\Picture  $picture
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
+    public function show(Picture $picture)
     {
         //
     }
@@ -59,10 +52,10 @@ class OrderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Order  $order
+     * @param  \App\Models\Picture  $picture
      * @return \Illuminate\Http\Response
      */
-    public function edit(Order $order)
+    public function edit(Picture $picture)
     {
         //
     }
@@ -71,10 +64,10 @@ class OrderController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Order  $order
+     * @param  \App\Models\Picture  $picture
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Order $order)
+    public function update(Request $request, Picture $picture)
     {
         //
     }
@@ -82,10 +75,10 @@ class OrderController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Order  $order
+     * @param  \App\Models\Picture  $picture
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Order $order)
+    public function destroy(Picture $picture)
     {
         //
     }
