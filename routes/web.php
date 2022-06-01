@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Picture;
+use App\Models\Item;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $slider = Picture::where('type', 2)->get();
+    $items = Item::with('picture')->get();
+    return view('welcome', compact('slider', 'items'));
 });
 
 Auth::routes();
