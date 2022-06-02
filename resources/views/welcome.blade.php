@@ -28,7 +28,7 @@
     <div class="parent">
         @foreach($items as $item)
         <div class="child">
-            <div class="card">
+            <div class="item_card">
                 <img src="{{ $item->picture->location }}" alt="Denim Jeans" style="width:100%">
                 <h1>{{ $item->name }}</h1>
                 <p class="price">${{$item->price}}</p>
