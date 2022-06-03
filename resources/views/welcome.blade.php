@@ -33,6 +33,7 @@
                 <h1>{{ $item->name }}</h1>
                 <p class="price">${{$item->price}}</p>
                 <p>{{ $item->description }}</p>
+                <a href="{{ route('create-order', $item->id)}}" class="button">agregar</a>
                 <p><button>Add to Cart</button></p>
             </div>
         </div>

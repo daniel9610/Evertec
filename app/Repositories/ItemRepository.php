@@ -13,6 +13,12 @@ class ItemRepository
         return $items;
     }
 
+    public function show($id)
+    {
+        $item = Item::where('id', $id)->with('picture')->get();
+        return $item;
+    }
+
     public function createItem()
     {
 
